@@ -1,0 +1,106 @@
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>oma verkkosivusto</title>
+    <style>
+        body  {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        }
+
+        .vasen {
+            float: left;
+        }
+
+        .oikea {
+            float: right;
+            width: 50%;
+            height: 100%;
+        }
+
+        .kuvaus {
+            overflow: hidden;
+        }
+
+        .otsikko {
+            color: rgb(26, 170, 213);
+            margin-left: 10px;
+        }
+
+        .mydiv {
+            margin-left: 10px;
+            border: 5px;
+            background-color: rgb(40, 183, 231);
+            text-align: center;
+            width: 30%;
+            overflow: auto;
+            padding: 8px;
+            border-radius: 12px;
+            color: white;
+            font-size: 150%;
+        }
+
+        .kuva {
+            border-radius: 8px;
+            width: 70%;
+            height: 70%;
+            float: right;
+        }
+
+        li {
+            border-radius: 8px;
+            transition: 0.5s;
+            font-size: 90%;
+            color: white;
+            margin-bottom: 5px;
+            padding: 3px;
+            background-color: rgb(81, 141, 244);
+        }
+                      
+    </style>
+
+<button onclick="Teemavaihto()">
+    tumma/vaalea tila
+</button>
+
+<script>
+let Tumma = false;
+
+function Teemavaihto() {
+    if (Tumma) {
+        document.body.style.transition = "0.5s";
+        document.body.style.color = 'rgb(0, 0, 0)';
+        document.body.style.backgroundColor = 'rgb(255, 255, 255)'; 
+        Tumma = false;
+    }   
+    else {
+        document.body.style.transition = "0.5s";
+        document.body.style.color = 'rgb(255, 255, 255)';
+        document.body.style.backgroundColor = 'rgb(67, 67, 67)';
+        Tumma = true;
+    }
+}
+    </script>
+</head>
+    <body>
+        <div class="vasen">
+            <h1 class="otsikko">Työergonomia</h1>
+            <div class="mydiv">
+                <p>Ergonomia on tärkeää toimistotyössä, koska se ehkäisee terveysongelmia, kuten niska- ja selkäkipuja, lisää työntekijöiden hyvinvointia ja motivaatiota sekä parantaa yrityksen tuottavuutta ja työn laatua.</p>
+            </div>
+            <div class="oikea">
+                <img class="kuva" src="https://bin.yhdistysavain.fi/1598730/Tb8uxQaCzXxHA741GOho0aKe93/Kuva1_n%C3%A4ytt%C3%B6p%C3%A4%C3%A4tety%C3%B6.jpg">
+                <h2 class="otsikko" id="kuvaus" style="overflow: hidden;">Kuva ohjeista työergonomiselle asennolle:</h2>
+                <a href="https://bin.yhdistysavain.fi/1598730/Tb8uxQaCzXxHA741GOho0aKe93/Kuva1_n%C3%A4ytt%C3%B6p%C3%A4%C3%A4tety%C3%B6.jpg">Lähde</a>
+            </div>
+            <ul class="mydiv">
+                <li>Istu niin, että jalkapohjat ovat tukevasti lattialla.</li>
+                <li>Polvet noin 90 asteen kulmassa.</li>
+                <li>Selkänojan tulee tukea alaselkää</li>
+                <li>Näytön yläreunan tulisi olla silmien tasolla tai hieman sen alapuolella.</li>
+                <li>Kyynärvarret vaakatasossa tai hieman alaspäin.</li>
+                <li>Pidä joka 30-60min pieni tauko jossa seisot ja liikut, sekä tee päivän aikana venytyksiä</li>
+            </ul>
+        </div>
+    </body>
+</html>
